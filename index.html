@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ledger Nilai — X ULP  Semester Ganjil  2026/2027</title>
+<title>Ledger Nilai — X TJKT 1  Semester Ganjil  2026/2027</title>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,700;9..144,800&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -168,14 +168,14 @@ tr:last-child td{border-bottom:none;}
 <!-- TOPBAR -->
 <div class="topbar">
   <div class="topbar-brand">
-    <div class="topbar-logo">ULP</div>
+    <div class="topbar-logo">TJKT 1</div>
     <div class="topbar-title">
-      Ledger Nilai — X ULP 
+      Ledger Nilai — X TJKT 1 
       <span>Semester Ganjil  · TP 2026/2027</span>
     </div>
   </div>
   <div class="topbar-actions">
-    <a href="https://alex-bahy.github.io/Portal-Kelas-XULP-TP-2026-2027/" class="btn btn-back">← Kembali ke Portal</a>
+    <a href="https://alex-bahy.github.io/Portal-Kelas-XTJKT 1-TP-2026-2027/" class="btn btn-back">← Kembali ke Portal</a>
     <button class="btn btn-reload" onclick="loadData()">↻ Refresh Data</button>
     <button class="btn btn-excel" onclick="downloadExcel()">⬇ Excel</button>
     <button class="btn btn-pdf" onclick="downloadPDF()">⬇ PDF</button>
@@ -238,7 +238,7 @@ tr:last-child td{border-bottom:none;}
 // ═══════════════════════════════════════════════
 // ▼▼▼ GANTI URL INI DENGAN URL WEB APP ANDA ▼▼▼
 // ═══════════════════════════════════════════════
-const API_URL = 'https://script.google.com/macros/s/AKfycbwUrceQ53idNx4gLFPbb_iWYAmVE7uLP_oZ5yh3VcmmvFVthUozHHWMrn0C9N_gcJrCQA/exec';
+const API_URL = 'https://script.google.com/macros/s/AKfycbyT5xzjeSOQ5Z964UV0ctwhzi71B8Ga1dgbEVE8kzxcP7OwusXTbrcoMRE5uRD3pyWIUA/exec';
 // ═══════════════════════════════════════════════
 // ▲▲▲ SELESAI — tidak perlu ubah yang lain  ▲▲▲
 // ═══════════════════════════════════════════════
@@ -410,7 +410,7 @@ function renderLedger() {
 
   const tableHtml = `<div class="table-outer">
     <div class="table-toolbar">
-      <div class="table-toolbar-title">📊 Ledger Nilai — X ULP · Semester Ganjil  2026/2027</div>
+      <div class="table-toolbar-title">📊 Ledger Nilai — X TJKT 1 · Semester Ganjil  2026/2027</div>
       <div class="legend">
         <span><span class="legend-dot" style="background:var(--sky)"></span>Umum</span>
         <span><span class="legend-dot" style="background:var(--teal)"></span>Kejuruan</span>
@@ -522,7 +522,7 @@ function downloadExcel() {
   const headers=['No','NIS','Nama Siswa',...mapel,'Jumlah','Rata-rata','Peringkat'];
   const data1=[
     ['LEDGER NILAI SEMESTER GANJIL TAHUN PELAJARAN 2026/2027'],
-    ['Kelas X Manajemen Perkantoran dan Layanan Bisnis (X ULP)'],
+    ['Kelas X Manajemen Perkantoran dan Layanan Bisnis (X TJKT 1)'],
     [],
     headers
   ];
@@ -540,7 +540,7 @@ function downloadExcel() {
   const ranked=[...siswa].filter(s=>s.rata!==null).sort((a,b)=>b.rata-a.rata);
   const data2=[
     ['REKAP PERINGKAT — SEMESTER GANJIL 2026/2027'],
-    ['Kelas X ULP '],
+    ['Kelas X TJKT 1 '],
     [],
     ['Peringkat','No','NIS','Nama Siswa','Rata-rata','Nilai Terisi']
   ];
@@ -551,7 +551,7 @@ function downloadExcel() {
   ws2['!cols']=[{wch:10},{wch:6},{wch:12},{wch:32},{wch:12},{wch:14}];
   XLSX.utils.book_append_sheet(wb,ws2,'Rekap Peringkat');
 
-  XLSX.writeFile(wb,'Ledger_Nilai_XULP _Ganjil _2025-2026.xlsx');
+  XLSX.writeFile(wb,'Ledger_Nilai_XTJKT 1 _Ganjil _2025-2026.xlsx');
 }
 
 // ── DOWNLOAD PDF ─────────────────────────────────────────────
